@@ -4,21 +4,21 @@ on:
  workflow_dispatch:
 
 jobs:
- job#1-hello-world-bash:
+ job-1-hello-world-bash:
   runs-on: ubuntu-latest
   steps:
   #  - name: checkout repo
   #    uses: actions/checkout@v4
    - run: echo "Hello World bash"
 
- job#2-hello-world-python:
+ job-2-hello-world-python:
   runs-on: ubuntu-latest
   steps:
     - run: print("Hello World")
       shell: python
       name: Hello World Python
 
- job#3-hello-world-JS:
+ job-3-hello-world-js:
   runs-on: ubuntu-latest
   steps:
     - name: From JS
