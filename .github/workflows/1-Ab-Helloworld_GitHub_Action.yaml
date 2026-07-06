@@ -1,13 +1,28 @@
-name: HelloWorld_GitHub_Action
+name: HelloWorld_GitHub_Actions
 
 on:
  workflow_dispatch:
 
 jobs:
- hello-world-job:
+ job#1-hello-world-bash:
   runs-on: ubuntu-latest
   steps:
   #  - name: checkout repo
   #    uses: actions/checkout@v4
-   - run: echo "Hello World"
+   - run: echo "Hello World bash"
+
+ job#2-hello-world-python:
+  runs-on: ubuntu-latest
+  steps:
+    - run: print("Hello World")
+      shell: python
+      name: Hello World Python
+
+ job#3-hello-world-JS:
+  runs-on: ubuntu-latest
+  steps:
+    - name: From JS
+      uses: actions/hello-world-javascript-action@v1 
+      with:
+        who-to-greet: 'Hello from JS'
      
